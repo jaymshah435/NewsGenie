@@ -1,0 +1,23 @@
+{
+  "name": "newsgenie",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SaaS customer portal for news publishers with an agentic AI assistant (React + Express + SQLite + Claude).",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "concurrently --names api,web --prefix-colors blue,green \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "test": "npm test -w backend && npm test -w frontend",
+    "lint": "npm run lint -w frontend",
+    "typecheck": "npm run typecheck -w backend && npm run typecheck -w frontend",
+    "reset-db": "npm run reset-db -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}

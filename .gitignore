@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local database and secrets
+backend/*.db
+backend/*.db-journal
+backend/.env
+frontend/.env
+frontend/.env.local
+
+.DS_Store
